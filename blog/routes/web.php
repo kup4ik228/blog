@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\MainController;
 use Illuminate\Support\Facades\Route;
+use Symfony\Component\Routing\Annotation\Route as AnnotationRoute;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,4 +21,6 @@ Route::get('/', function () {
 
 Route::group(['prefix'=>'admin','namespace'=>'admin'],function(){
     Route::get('/',[MainController::class,'index'])->name('admin.index');
+    Route::resource('/categories','CategoryController');
 });
+
