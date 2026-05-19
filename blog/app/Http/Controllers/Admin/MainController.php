@@ -12,7 +12,6 @@ class MainController extends Controller
     {
         $tag=new Tag();
         $tag->title='привет мир!';
-        $tag->save();
         return view('admin.index');
 
     }
